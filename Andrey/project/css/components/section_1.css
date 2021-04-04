@@ -1,0 +1,36 @@
+.section_bg1 {
+    position: relative;
+    min-height: 600px;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.section_bg1 > img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+}
+
+.info {
+    position: relative;
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 24px;
+}
+
+.learnMore {
+    text-decoration: underline;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.learnMore:hover {
+    color: chocolate;
+    transition: .3s;
+}

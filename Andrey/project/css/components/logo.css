@@ -1,0 +1,12 @@
+.logo {
+    margin: auto;
+    text-decoration: none;
+    font-size: 42px;
+    letter-spacing: 15px;
+    color: #000000;
+}
+
+.logo:hover {
+    transition: .3s;
+    color:chocolate;
+}
