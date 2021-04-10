@@ -3,3 +3,8 @@
     border: none;
     cursor: pointer;
 }
+
+.section_6__button > button {
+    width: 66px;
+    height: 48px;
+}

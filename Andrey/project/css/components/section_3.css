@@ -1,0 +1,47 @@
+.section_bg3 {
+    padding: 100px 0;
+    background: #F8F6F2;
+}
+
+.section_3__info {
+    display: flex;
+}
+
+.section_3__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section_3__title {
+    text-align: center;
+    margin-bottom: 90px;
+    max-width: 600px;
+    font-size: 30px;
+    line-height: 36px;
+    color: #1A1A1A;
+}
+
+.section_3__photo {
+    display: flex;
+    flex-direction: column;
+}
+
+.section_3__photo-men-women {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section_3__photo-men, .section_3__photo-women {
+    display: flex;
+    flex-direction: column;
+}
+
+.section_3__link {
+    margin: 10px 0 60px;
+}
+
+.section_3__link:hover {
+    color: chocolate;
+    transition: .2s;
+}
