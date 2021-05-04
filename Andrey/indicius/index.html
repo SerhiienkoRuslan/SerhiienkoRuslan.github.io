@@ -11,210 +11,222 @@
 <body>
 <header class="header">
   <div class="container">
-    <div class="header__top">
+    <div class="header__inner">
       <a class="logo" href="#">
         <img src="images/logo.svg" alt="logo photo" class="logo-img">
       </a>
 
-      <ul class="header__nav">
-        <li><a class="header__nav-link" href="#">
+      <nav class="header__nav">
+        <a class="header__nav-link" href="#">
           Work
-        </a></li>
-        <li><a class="header__nav-link" href="#">
+        </a>
+        <a class="header__nav-link" href="#">
           Services
-        </a></li>
-        <li><a class="header__nav-link" href="#">
+        </a>
+        <a class="header__nav-link" href="#">
           About
-        </a></li>
-        <li><a class="header__nav-link" href="#">
+        </a>
+        <a class="header__nav-link" href="#">
           Contact
-        </a></li>
-      </ul>
-    </div>
-
-    <div class="header__content">
-      <h1 class="title">
-        Designing for a more human-centered world.
-        <span class="header__title-span">Together.</span>
-        <span class="header__title-color">
-        </span>
-      </h1>
+        </a>
+      </nav>
     </div>
   </div>
 </header>
 
-<section class="section about">
-  <div class="container">
-    <div class="about__info">
-      <p class="about__text">
-        We’re a team of humans with the strategy, tools, and talent
-        to build outstanding branding solutions and digital products.
-      </p>
-      <div class="about__images">
-        <img class="about__info-image" src="images/idea.svg" alt="idea">
-        <img class="about__info-image" src="images/tool.svg" alt="tool">
-        <img class="about__info-image" src="images/face.svg" alt="face">
+<main>
+  <section class="home">
+    <div class="container">
+      <div class="home__inner">
+        <h1 class="title">
+          Designing for a more human-centered world.
+          <span class="home__title-span">Together.</span>
+        </h1>
+
+        <div class="home__screen-images">
+          <span class="circle circle-1"></span>
+          <span class="circle circle-2"></span>
+          <span class="circle circle-3"></span>
+          <span class="circle circle-4"></span>
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="about__content">
-      <div class="about__content-item">
-        <a class="about__image-link" href="#">
-          <img src="images/content-image-1.jpg" alt="content">
-        </a>
+  <section class="section about">
+    <div class="container">
+      <div class="about__info">
+        <p class="about__text">
+          We’re a team of humans with the strategy, tools, and talent
+          to build outstanding branding solutions and digital products.
+        </p>
+        <div class="about__images">
+          <img class="about__info-image" src="images/idea.svg" alt="idea">
+          <img class="about__info-image" src="images/tool.svg" alt="tool">
+          <img class="about__info-image" src="images/face.svg" alt="face">
+        </div>
+      </div>
 
-        <div class="about__content-info">
-          <h5 class="about__content-title">
-            Columbia University
-          </h5>
-          <p class="about__content-text">
-            Redesigning Columbia University's
-            genomics app for on-the-go analysis
+      <div class="about__content">
+        <div class="about__content-item">
+          <a class="about__image-link" href="#">
+            <img src="images/content-image-1.jpg" alt="content">
+          </a>
+
+          <div class="about__content-info">
+            <h5 class="about__content-title">
+              Columbia University
+            </h5>
+            <p class="about__content-text">
+              Redesigning Columbia University's
+              genomics app for on-the-go analysis
+            </p>
+            <a class="content-button" href="#">
+              <img class="more-blue" src="images/arrow.svg" alt="arrow">
+              View Case Study
+            </a>
+          </div>
+        </div>
+
+        <div class="about__content-item">
+          <div class="about__content-info">
+            <h5 class="about__content-title">
+              Nubi
+            </h5>
+            <p class="about__content-text">
+              Designing a new product experience
+              for a PayPal partner in the fintech industry
+            </p>
+            <a class="content-button" href="#">
+              <img class="more-black" src="images/arrow.svg" alt="arrow">
+              View Case Study
+            </a>
+          </div>
+
+          <a class="about__image-link" href="#">
+            <img src="images/content-image-2.jpg" alt="content">
+          </a>
+        </div>
+      </div>
+
+      <button class="btn-reset btn about__button">
+        View All Case Studies
+      </button>
+    </div>
+  </section>
+
+  <section class="section design">
+    <div class="container">
+      <div class="design__arrows">
+        <img src="images/left-arrow.svg" alt="arrow">
+        <img src="images/right-arrow.svg" alt="arrow">
+      </div>
+
+      <div class="design__content">
+        <div class="design__info">
+          <h2 class="title">
+            Design Sprint. Together.
+          </h2>
+          <p class="text">
+            Solve tough problems in a single week through this
+            structured, step-by-step user experience design
+            workshop used by the most innovative companies in the world.
           </p>
           <a class="content-button" href="#">
             <img class="more-blue" src="images/arrow.svg" alt="arrow">
-            View Case Study
-          </a>
-        </div>
-      </div>
-
-      <div class="about__content-item">
-        <div class="about__content-info">
-          <h5 class="about__content-title">
-            Nubi
-          </h5>
-          <p class="about__content-text">
-            Designing a new product experience
-            for a PayPal partner in the fintech industry
-          </p>
-          <a class="content-button" href="#">
-            <img class="more-black" src="images/arrow.svg" alt="arrow">
-            View Case Study
+            Discover our services & processes
           </a>
         </div>
 
-        <a class="about__image-link" href="#">
-          <img src="images/content-image-2.jpg" alt="content">
-        </a>
+        <img class="design__photo" src="images/design.svg" alt="design">
       </div>
     </div>
+  </section>
 
-    <button class="btn-reset btn about__button">
-      View All Case Studies
-    </button>
-  </div>
-</section>
+  <section class="section articles">
+    <div class="container">
+      <h3 class="title">
+        We have a lot to say
+      </h3>
 
-<section class="section design">
-  <div class="container">
-    <div class="design__arrows">
-      <img src="images/left-arrow.svg" alt="arrow">
-      <img src="images/right-arrow.svg" alt="arrow">
-    </div>
-
-    <div class="design__content">
-      <div class="design__info">
-        <h2 class="title">
-          Design Sprint. Together.
-        </h2>
-        <p class="text">
-          Solve tough problems in a single week through this
-          structured, step-by-step user experience design
-          workshop used by the most innovative companies in the world.
-        </p>
-        <a class="content-button" href="#">
-          <img class="more-blue" src="images/arrow.svg" alt="arrow">
-          Discover our services & processes
-        </a>
-      </div>
-
-      <img class="design__photo" src="images/design.svg" alt="design">
-    </div>
-  </div>
-</section>
-
-<section class="section articles">
-  <div class="container">
-    <h3 class="title">
-      We have a lot to say
-    </h3>
-
-    <p class="text">
-      Articles about human-centered design by members of the Indi team.
-    </p>
-
-    <div class="articles__items">
-      <div class="articles__item">
-        <img class="articles__item-photo" src="images/articles-photo-1.svg" alt="photo">
-
-        <p class="articles__item-text">
-          Yet another story about teams and work culture during pandemic time
-        </p>
-        <a class="articles__item-link" href="#">
-          <img src="images/link.svg" alt="link">
-        </a>
-      </div>
-
-      <div class="articles__item">
-        <img class="articles__item-photo" src="images/articles-photo-2.svg" alt="photo">
-
-        <p class="articles__item-text">
-          How we Used a Remote Design Sprint to Kick off Product Development for a Healthtech Startup
-        </p>
-        <a class="articles__item-link" href="#">
-          <img src="images/link.svg" alt="link">
-        </a>
-      </div>
-
-      <div class="articles__item">
-        <img class="articles__item-photo" src="images/articles-photo-3.svg" alt="photo">
-
-        <p class="articles__item-text">
-          Designers, we need to talk about business and strategy
-        </p>
-        <a class="articles__item-link" href="#">
-          <img src="images/link.svg" alt="link">
-        </a>
-      </div>
-    </div>
-
-    <a class="content-button" href="#">
-      <img class="more-blue" src="images/arrow.svg" alt="arrow">
-      Discover our services & processes
-    </a>
-  </div>
-</section>
-
-<section class="section community">
-  <div class="community__container">
-    <div class="community__photos">
-      <img class="community__photo" src="images/community-gallery/community-photo-1.png" alt="content photo">
-      <img class="community__photo" src="images/community-gallery/community-photo-2.png" alt="content photo">
-      <img class="community__photo" src="images/community-gallery/community-photo-5.png" alt="content photo">
-      <img class="community__photo" src="images/community-gallery/community-photo-4.png" alt="content photo">
-      <img class="community__photo" src="images/community-gallery/community-photo-3.png" alt="content photo">
-    </div>
-    <div class="community__inner">
-      <h4 class="community__title">
-        Meet the humans of Indicius
-      </h4>
-      <p class="community__text">
-        We believe innovation happens
-        when both our team and our clients can grow and thrive.
+      <p class="text">
+        Articles about human-centered design by members of the Indi team.
       </p>
-      <button class="btn-reset btn about__button">
-        Get to know us
-      </button>
+
+      <div class="articles__items">
+        <div class="articles__item">
+          <img class="articles__item-photo" src="images/articles-photo-1.svg" alt="photo">
+
+          <p class="articles__item-text">
+            Yet another story about teams and work culture during pandemic time
+          </p>
+          <a class="articles__item-link" href="#">
+            <img src="images/link.svg" alt="link">
+          </a>
+        </div>
+
+        <div class="articles__item">
+          <img class="articles__item-photo" src="images/articles-photo-2.svg" alt="photo">
+
+          <p class="articles__item-text">
+            How we Used a Remote Design Sprint to Kick off Product Development for a Healthtech Startup
+          </p>
+          <a class="articles__item-link" href="#">
+            <img src="images/link.svg" alt="link">
+          </a>
+        </div>
+
+        <div class="articles__item">
+          <img class="articles__item-photo" src="images/articles-photo-3.svg" alt="photo">
+
+          <p class="articles__item-text">
+            Designers, we need to talk about business and strategy
+          </p>
+          <a class="articles__item-link" href="#">
+            <img src="images/link.svg" alt="link">
+          </a>
+        </div>
+      </div>
+
+      <a class="content-button" href="#">
+        <img class="more-blue" src="images/arrow.svg" alt="arrow">
+        Discover our services & processes
+      </a>
     </div>
-    <div class="community__photos">
-      <img class="community__photo" src="images/community-gallery/community-photo-6.png" alt="content photo">
-      <img class="community__photo" src="images/community-gallery/community-photo-7.png" alt="content photo">
-      <img class="community__photo" src="images/community-gallery/community-photo-8.png" alt="content photo">
-      <img class="community__photo" src="images/community-gallery/community-photo-10.png" alt="content photo">
-      <img class="community__photo" src="images/community-gallery/community-photo-9.png" alt="content photo">
+  </section>
+
+  <section class="section community">
+    <div class="community__container">
+      <div class="community__photos">
+        <img class="community__photo" src="images/community-gallery/community-photo-1.png" alt="content photo">
+        <img class="community__photo" src="images/community-gallery/community-photo-2.png" alt="content photo">
+        <img class="community__photo" src="images/community-gallery/community-photo-5.png" alt="content photo">
+        <img class="community__photo" src="images/community-gallery/community-photo-4.png" alt="content photo">
+        <img class="community__photo" src="images/community-gallery/community-photo-3.png" alt="content photo">
+      </div>
+      <div class="community__inner">
+        <h4 class="community__title">
+          Meet the humans of Indicius
+        </h4>
+        <p class="community__text">
+          We believe innovation happens
+          when both our team and our clients can grow and thrive.
+        </p>
+        <button class="btn-reset btn about__button">
+          Get to know us
+        </button>
+      </div>
+      <div class="community__photos">
+        <img class="community__photo" src="images/community-gallery/community-photo-6.png" alt="content photo">
+        <img class="community__photo" src="images/community-gallery/community-photo-7.png" alt="content photo">
+        <img class="community__photo" src="images/community-gallery/community-photo-8.png" alt="content photo">
+        <img class="community__photo" src="images/community-gallery/community-photo-10.png" alt="content photo">
+        <img class="community__photo" src="images/community-gallery/community-photo-9.png" alt="content photo">
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+
+</main>
 
 <footer class="footer">
   <div class="container">
