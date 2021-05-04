@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Roboto-Regular', 'Arial', 'sans-serif'; }
+
+a {
+  text-decoration: none; }
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.btn-reset {
+  text-decoration: none;
+  border: none;
+  box-shadow: none;
+  cursor: pointer; }
+
+.container {
+  max-width: 1390px;
+  padding: 0 15px;
+  margin: 0 auto; }
+
+.section {
+  background-color: #60777C;
+  padding: 75px 0; }
+
+.inner-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 569px; }
+  .inner-info__title {
+    margin-bottom: 22px;
+    font-size: 56px;
+    line-height: 56px;
+    text-align: center;
+    color: #000000; }
+  .inner-info__text {
+    margin-bottom: 77px;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    color: #000000; }
+  .inner-info__link {
+    margin-top: -40px;
+    font-size: 18px;
+    line-height: 22px;
+    text-decoration: underline;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff; }
+    .inner-info__link:hover {
+      transition: .3s;
+      color: red; }
+
+.slick-list {
+  overflow: hidden; }
+
+.slick-track {
+  display: flex; }
+
+.slick-dots {
+  display: flex;
+  justify-content: center; }
+  .slick-dots .slick-active button {
+    background-color: transparent;
+    border: 1px solid #ffffff; }
+  .slick-dots button {
+    margin: 0 10px;
+    font-size: 0;
+    border: none;
+    padding: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #ffffff; }
+
+/*# sourceMappingURL=index.css.map */
