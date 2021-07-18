@@ -1,0 +1,224 @@
+.about {
+  &__inner {
+    padding: 30px 135px;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  &__title {
+    font-weight: bold;
+    font-size: 84px;
+    line-height: 112px;
+    margin-bottom: 50px;
+    max-width: 800px;
+    color: $black;
+  }
+  &__slider {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &__slider-img {
+    height: 100vh;
+    object-fit: cover;
+  }
+  &__slider .slick-arrow {
+    position: absolute;
+    z-index: 1;
+    bottom: -50px;
+    width: 30px;
+    height: 30px;
+  }
+  &__slider .slick-arrow.slick-prev {
+    left: 40px;
+    background-image: url("../images/arrow-left.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    font-size: 0;
+  }
+  &__slider .slick-arrow.slick-next {
+    left: 100px;
+    background-image: url("../images/arrow-right.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    font-size: 0;
+  }
+  .liner {
+    background-color: #F5EBE9;
+    left: 140px;
+    bottom: -40px;
+    width: 0;
+    height: 5px;
+    position: absolute;
+    content: '';
+    animation-name: liner;
+    animation-duration: 10000ms;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  @keyframes liner {
+    0% {
+      width: 0;
+    }
+
+    100% {
+      width: 234px;
+    }
+  }
+  &__destinations {
+    position: absolute;
+    bottom: -75px;
+    right: -15px;
+    padding: 45px;
+    background-color: #ffffff;
+    color: #A79997;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 10px 30px 5px rgba(219, 200, 197, 0.2);
+  }
+  &__destinations label {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  &__destinations-title {
+    display: flex;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  &__destinations select {
+    color: #FF715B;
+  }
+}
+
+/*--------1024px--------------------------------*/
+
+@media (max-width: 1024px) {
+  .about {
+    &__inner {
+      padding: 25px 90px;
+      min-height: 80vh;
+    }
+    &__slider-img {
+      height: 80vh;
+    }
+    @keyframes liner {
+      100% {
+        width: 150px;
+      }
+    }
+    &__destinations-btn {
+      font-size: 16px;
+      line-height: 20px;
+      padding: 12px 24px;
+    }
+  }
+}
+
+/*--------------------------------------------*/
+
+/*--------768px--------------------------------*/
+
+@media (max-width: 768px) {
+  .about {
+    &__inner {
+      min-height: 60vh;
+      padding: 20px 50px;
+    }
+    &__slider-img {
+      height: 60vh;
+    }
+    &__btn {
+      font-size: 16px;
+      line-height: 20px;
+      padding: 12px 24px;
+    }
+    &__title {
+      font-size: 65px;
+      line-height: 90px;
+      margin-bottom: 35px;
+      max-width: 650px;
+    }
+    &__slider .slick-arrow {
+      bottom: -30px;
+      width: 20px;
+      height: 20px;
+    }
+    &__slider .slick-arrow.slick-prev {
+      left: 15px;
+    }
+    &__slider .slick-arrow.slick-next {
+      left: 60px;
+    }
+    .liner {
+      left: 80px;
+      bottom: -25px;
+    }
+    @keyframes liner {
+      100% {
+        width: 150px;
+      }
+    }
+    &__destinations {
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 20px;
+    }
+    &__destinations-title {
+      font-size: 14px;
+      line-height: 16px;
+    }
+    &__destinations label {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+/*--------------------------------------------*/
+
+/*--------426px--------------------------------*/
+
+@media (max-width: 426px) {
+  .about {
+    &__inner {
+      justify-content: normal;
+      min-height: 60vh;
+      padding: 15px 25px;
+    }
+    &__title {
+      font-size: 35px;
+      line-height: 50px;
+      margin-bottom: 15px;
+    }
+    &__slider-img {
+      height: 60vh;
+    }
+    &__slider .slick-arrow {
+      bottom: -30px;
+      width: 15px;
+      height: 15px;
+    }
+    &__slider .slick-arrow.slick-prev {
+      left: 10px;
+    }
+    &__slider .slick-arrow.slick-next {
+      left: 35px;
+    }
+    .liner {
+      display: none;
+    }
+    &__destinations {
+      justify-content: space-between;
+      width: 90%;
+    }
+  }
+}
+
+/*--------------------------------------------*/

@@ -1,0 +1,252 @@
+.header {
+  background-color: #ffffff;
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 0;
+  }
+  .logo:hover {
+    animation-name: logo-anim;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes logo-anim {
+    0% {
+      transform: rotateZ(0deg);
+    }
+    100% {
+      transform: rotateZ(3deg);
+    }
+  }
+  .menu {
+    &__list {
+      display: flex;
+      align-items: center;
+    }
+    &__list-item {
+      padding: 0 20px;
+    }
+    &__list-link {
+      transition: .2s;
+      color: $black;
+    }
+    &__list-link:hover {
+      color: #FF715B;
+    }
+  }
+  &__buttons {
+    display: flex;
+    align-items: center;
+  }
+  &__btn {
+    transition: .2s;
+  }
+  &__btn:hover {
+    color: #FF715B;
+    .header__btn-img {
+      transform: scale(1.1);
+    }
+  }
+  &__btn-img {
+    transition: .2s;
+    margin-right: 10px;
+  }
+  &__btn--account {
+    margin-right: 35px;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  &__btn--account:after {
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 20px;
+    background-color: #F1E0DD;
+    right: -20px;
+    top: 0;
+    cursor: default;
+  }
+  &__search {
+    position: relative;
+  }
+  &__input-search {
+    margin-right: 10px;
+    background-color: #F6F6F6;
+    padding: 5px 30px 5px 10px;
+    border-radius: 5px;
+  }
+  &__input-search:focus {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  }
+  &__search-cancel {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    right: 16%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+  .account {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 110%;
+    padding: 50px 20px 20px;
+    background: linear-gradient(90deg, #A6F2F2 0%, #DDF181 100%);
+    width: 500px;
+    height: 300px;
+    transition: .5s;
+    box-shadow: 0 0 20px 0 #000000;
+    &.account-form {
+      transform: translateY(250%);
+    }
+    &__text {
+      text-align: center;
+      padding: 10px 0;
+      color: $black;
+    }
+    &__form-input {
+      width: 100%;
+      padding: 15px 25px;
+      margin-bottom: 10px;
+    }
+    &__form-btn {
+      display: block;
+      font-size: 30px;
+      background-color: #ffffff;
+      margin: 0 auto;
+      padding: 5px 10px;
+      transition: .2s;
+      border-radius: 2px;
+    }
+    &__form-btn:hover {
+      background-color: #9CD9EC;
+    }
+    &__cancel {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      right: 3%;
+      top: 10%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+    }
+    &__reload {
+      position: absolute;
+      left: 3%;
+      top: 10%;
+    }
+  }
+}
+
+/*--------1024px--------------------------------*/
+
+@media (max-width: 1024px) {
+  .header {
+    &__buttons {
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+    &__btn--account {
+      margin-bottom: 10px;
+    }
+    &__btn--account:after {
+      display: none;
+    }
+  }
+}
+
+/*--------------------------------------------------*/
+
+/*--------768px--------------------------------*/
+
+@media (max-width: 768px) {
+  .header {
+    min-height: 130px;
+    &__inner {
+      padding: 30px 0;
+    }
+    &__buttons {
+      margin-left: 10px;
+    }
+    .account.account-form {
+      transform: translateY(200%);
+    }
+    .menu {
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      transition: .5s;
+      z-index: -1;
+      &.up-side-menu {
+        transform: translateY(190%);
+      }
+      &__list {
+        flex-direction: column;
+      }
+      &__list-item {
+        padding: 10px 0;
+      }
+    }
+
+  }
+}
+
+.margin-top {
+  transition: .5s;
+  margin-top: 200px;
+}
+
+.margin-top-off {
+  transition: .5s;
+  margin-top: 0;
+}
+
+/*-------------------------------------*/
+
+/*--------426px--------------------------------*/
+
+@media (max-width: 426px) {
+  .header {
+    min-height: 155px;
+    &__inner {
+      padding-bottom: 10px;
+      position: relative;
+    }
+    .menu.up-side-menu {
+      transform: translateY(180%);
+    }
+    .search-center {
+      position: absolute;
+      left: 0;
+      bottom: -35px;
+    }
+    .account {
+      padding: 20px 10px 10px;
+      width: 300px;
+      height: 270px;
+      &.account-form {
+        transform: translateY(200%);
+      }
+    }
+  }
+}
+
+/*-------------------------------------*/
+
+/*--------320px--------------------------------*/
+
+@media (max-width: 320px) {
+  .header__input-search {
+    width: 240px;
+  }
+}
+
+/*-------------------------------------*/

@@ -1,0 +1,120 @@
+.apps {
+  &__inner {
+    background: linear-gradient(90deg, #A6F2F2 0%, #DDF181 100%);
+    padding: 30px 130px;
+    min-height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+  }
+  &__image {
+    position: absolute;
+    content: '';
+  }
+  &__image--plane {
+    background-image: url("../images/plane.png");
+    top: 35px;
+    right: 405px;
+    width: 425px;
+    height: 173px;
+  }
+  &__image--screen-1 {
+    background-image: url("../images/screen-1.png");
+    top: 186px;
+    right: 316px;
+    width: 288.2px;
+    height: 364px;
+    z-index: 1;
+  }
+  &__image--screen-2 {
+    background-image: url("../images/screen-2.png");
+    top: 78px;
+    right: 92px;
+    width: 288.2px;
+    height: 472px;
+  }
+  &__image--bagpack {
+    background-image: url("../images/bagpack.png");
+    top: 180px;
+    right: 316px;
+    width: 288.2px;
+    height: 364px;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2;
+  }
+  &__image--logo {
+    background-image: url("../images/logo.svg");
+    top: 485px;
+    right: 375px;
+    width: 171px;
+    height: 45px;
+    z-index: 2;
+  }
+  &__title {
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 65px;
+    color: $black;
+    max-width: 619px;
+    margin-bottom: 60px;
+  }
+  &__btn {
+    display: inline-block;
+    margin: 0 30px 10px 0;
+  }
+}
+
+/*--------768px--------------------------------*/
+
+@media (max-width: 768px) {
+  .apps {
+    &__inner {
+      padding-bottom: 500px;
+    }
+    &__image--plane {
+      z-index: 2;
+      top: 400px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+    &__image--screen-1 {
+      top: 491px;
+    }
+    &__image--screen-2 {
+      top: 383px;
+    }
+    &__image--bagpack {
+      top: 470px;
+    }
+    &__image--logo {
+      top: 775px;
+    }
+  }
+}
+
+/*--------------------------------------------*/
+
+/*--------426px--------------------------------*/
+
+@media (max-width: 426px) {
+  .apps {
+    &__inner {
+      padding: 20px;
+      min-height: 420px;
+    }
+    &__title {
+      font-size: 30px;
+      line-height: 45px;
+      margin-bottom: 20px;
+    }
+    &__photos {
+      display: none;
+    }
+  }
+}
+
+/*--------------------------------------------*/

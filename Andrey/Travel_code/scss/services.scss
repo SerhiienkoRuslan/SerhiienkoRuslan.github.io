@@ -1,0 +1,243 @@
+.services {
+  &__inner {
+    display: flex;
+    justify-content: center;
+  }
+  &__photo {
+    width: 570px;
+    height: 700px;
+    position: relative;
+    box-shadow: 0 0 70px 37px #D3E2FF;
+  }
+  &__photo-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  &__info {
+    margin-left: 150px;
+    width: 600px;
+  }
+  &__title {
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 65px;
+    color: $black;
+    margin-bottom: 90px;
+  }
+  &__subtitle {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    color: #000000;
+    margin: 0 0 25px 90px;
+    position: relative;
+  }
+  &__subtitle::before {
+    background-repeat: no-repeat;
+    content: '';
+    position: absolute;
+    left: -90px;
+    top: -5px;
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+  }
+  .services__subtitle--user::before {
+    background-image: url("../images/sound-services.svg");
+  }
+  .services__subtitle--world::before {
+    background-image: url("../images/world-services.svg");
+  }
+  .services__subtitle--sound::before {
+    background-image: url("../images/sound-services.svg");
+  }
+  &--line {
+    padding-bottom: 50px;
+    margin: 0 0 50px 90px;
+    position: relative;
+  }
+  &--line:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 600px;
+    height: 1px;
+    background-color: #F1E0DD;
+  }
+  &__colors-item {
+    position: absolute;
+  }
+  &__colors-item--rect {
+    content: '';
+    width: 142px;
+    height: 142px;
+    top: -65px;
+    right: -65px;
+    border-radius: 12px;
+    background-color: #FFCA45;
+  }
+  &__colors-item--circle {
+    content: '';
+    width: 54px;
+    height: 54px;
+    top: 50%;
+    left: -90px;
+    border: 8px solid #FF5B65;
+    border-radius: 50%;
+  }
+  &__colors-item--points {
+    background-image: url("../images/points.svg");
+    content: '';
+    width: 150px;
+    height: 150px;
+    bottom: -90px;
+    left: -75px;
+  }
+}
+
+/*--------1024px--------------------------------*/
+
+@media (max-width: 1024px) {
+  .services {
+    &__info {
+      margin-left: 100px;
+      width: 600px;
+    }
+  }
+}
+
+/*--------------------------------------------*/
+
+/*--------768px--------------------------------*/
+
+@media (max-width: 768px) {
+  .services {
+    &__photo {
+      width: 50%;
+      height: 700px;
+      box-shadow: 0 0 35px 10px #D3E2FF;
+    }
+    &__info {
+      margin-left: 30px;
+      width: 50%;
+    }
+    &__title {
+      font-size: 36px;
+      line-height: 50px;
+      margin-bottom: 30px;
+    }
+    &__subtitle {
+      font-size: 22px;
+      line-height: 30px;
+      margin: 0 0 20px 60px;
+    }
+    &--line {
+      padding-bottom: 30px;
+      margin: 0 0 30px 60px;
+    }
+    &--line:after {
+      width: 270px;
+    }
+    &__subtitle::before {
+      left: -60px;
+      width: 40px;
+      height: 40px;
+    }
+    &__colors-item--rect {
+      width: 70px;
+      height: 70px;
+      top: -20px;
+      right: -20px;
+    }
+  }
+}
+
+/*--------------------------------------------*/
+
+/*--------426px--------------------------------*/
+
+@media (max-width: 426px) {
+  .services {
+    &__inner {
+      flex-wrap: wrap;
+    }
+    &__photo {
+      width: 100%;
+      height: 400px;
+      margin-bottom: 40px;
+    }
+    &__info {
+      width: 100%;
+    }
+    &__title {
+      font-size: 30px;
+      line-height: 35px;
+      margin-bottom: 20px;
+    }
+    &__subtitle {
+      font-size: 20px;
+      line-height: 25px;
+      margin: 0 0 20px 30px;
+    }
+    &__text {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    &--line {
+      padding-bottom: 20px;
+      margin: 0 0 20px 30px;
+    }
+    &--line:after {
+      width: 300px;
+    }
+    &__subtitle::before {
+      left: -45px;
+      width: 30px;
+      height: 30px;
+    }
+    &__colors-item--points {
+      display: none;
+    }
+  }
+}
+
+/*--------------------------------------------*/
+
+/*--------320px--------------------------------*/
+
+@media (max-width: 320px) {
+  .services {
+    &__photo {
+      margin-bottom: 20px;
+    }
+    &__title {
+      font-size: 25px;
+      line-height: 30px;
+      margin-bottom: 15px;
+    }
+    &__subtitle {
+      font-size: 18px;
+      line-height: 23px;
+      margin: 0 0 10px;
+    }
+    &--line {
+      padding-bottom: 15px;
+      margin: 0 0 15px;
+    }
+    &--line:after {
+      width: 250px;
+    }
+    &__subtitle::before {
+      left: -40px;
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+/*--------------------------------------------*/
