@@ -3,7 +3,21 @@
     margin: 0 auto;
     align-items: center;
     width: 100%;
-    background: #ffffff;}
+    background: #ffffff;
+    transition: 0.3s;
+}
+
+.header-fixed {
+    padding: 15px;
+    z-index: 2;
+    position: fixed;
+    background-color: #007C89;
+}
+
+.button {
+    max-width: 100px;
+    margin-top: 20px;
+}
 
 .header .container {
     display: flex;
@@ -24,12 +38,6 @@
 
 .header__link:last-child {
     margin-right: 0;
-}
-
-.header__link:hover {
-    color: #692340;
-    transition: .2s;
-    border-bottom: 2px solid;
 }
 
 .logo {
@@ -54,3 +62,4 @@
     justify-content: space-between;
     padding: 0 20px;
 }
+
