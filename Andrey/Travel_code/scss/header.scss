@@ -1,9 +1,12 @@
 .header {
   background-color: #ffffff;
+  & span {
+    width: 10%;
+  }
   &__inner {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     padding: 50px 0;
   }
   .logo:hover {
@@ -36,6 +39,10 @@
     }
   }
   &__buttons {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0%, -50%);
     display: flex;
     align-items: center;
   }
@@ -44,16 +51,15 @@
   }
   &__btn:hover {
     color: #FF715B;
-    .header__btn-img {
+    .header__btn-img--account {
       transform: scale(1.1);
     }
   }
   &__btn-img {
     transition: .2s;
-    margin-right: 10px;
   }
   &__btn--account {
-    margin-right: 35px;
+    margin-right: 60px;
     position: relative;
     display: flex;
     align-items: center;
@@ -68,34 +74,68 @@
     top: 0;
     cursor: default;
   }
+  &__btn-img--account {
+    margin-right: 10px;
+  }
   &__search {
     position: relative;
+    width: 0;
+    height: 42px;
+  }
+  &__search.active {
+    width: 300px;
   }
   &__input-search {
-    margin-right: 10px;
-    background-color: #F6F6F6;
-    padding: 5px 30px 5px 10px;
-    border-radius: 5px;
-  }
-  &__input-search:focus {
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    height: 42px;
+    width: 0;
+    padding: 0 42px 0 15px;
+    border: none;
+    border-bottom: 2px solid transparent;
+    outline: none;
+    background: transparent;
+    transition: .4s cubic-bezier(0, 0.8, 0, 1);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
   }
   &__search-cancel {
+    display: none;
     position: absolute;
     width: 10px;
     height: 10px;
-    right: 16%;
+    right: 15%;
     top: 50%;
     transform: translate(-50%, -50%);
     cursor: pointer;
+    z-index: 3;
+  }
+  &__search-cancel.active {
+    display: block;
+  }
+  &__input-btn {
+    border: none;
+    height: 42px;
+    width: 42px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    z-index: 1;
+  }
+  &__input-search.active {
+    width: 300px;
+    padding: 0 70px 0 15px;
+    z-index: 1;
+    border: 2px solid #FF715B;
   }
   .account {
-    z-index: 1;
+    z-index: 20;
     position: absolute;
     left: 0;
     right: 0;
     margin: 0 auto;
-    bottom: 110%;
+    top: -100%;
     padding: 50px 20px 20px;
     background: linear-gradient(90deg, #A6F2F2 0%, #DDF181 100%);
     width: 500px;
@@ -103,7 +143,7 @@
     transition: .5s;
     box-shadow: 0 0 20px 0 #000000;
     &.account-form {
-      transform: translateY(250%);
+      transform: translateY(400%);
     }
     &__text {
       text-align: center;
@@ -158,6 +198,9 @@
     &__btn--account:after {
       display: none;
     }
+    &__input-search {
+      right: 2px;
+    }
   }
 }
 
@@ -167,26 +210,50 @@
 
 @media (max-width: 768px) {
   .header {
-    min-height: 130px;
+    min-height: 120px;
     &__inner {
       padding: 30px 0;
     }
+    &__list-link:hover {
+      color: $default;
+    }
     &__buttons {
       margin-left: 10px;
+      align-items: flex-end;
+      top: 60%;
+      right: 1%;
+      transform: translate(0%, -50%);
     }
-    .account.account-form {
-      transform: translateY(200%);
+    &__btn--account {
+      margin-right: 0;
+    }
+    &__input-btn {
+      height: 35px;
+      width: 35px;
+    }
+    &__input-search {
+      height: 35px;
+      font-size: 16px;
+      line-height: 20px;
+    }
+    &__search-cancel {
+      top: 44%;
+      right: 14%;
     }
     .menu {
       position: absolute;
-      bottom: 100%;
+      top: 80%;
       left: 0;
       right: 0;
       margin: 0 auto;
-      transition: .5s;
-      z-index: -1;
-      &.up-side-menu {
-        transform: translateY(190%);
+      z-index: 2;
+      background-color: #FFFFFF;
+      max-height: 0;
+      overflow: hidden;
+      transition: .3s;
+      &.show {
+        max-height: 100vh;
+        width: 100%;
       }
       &__list {
         flex-direction: column;
@@ -195,18 +262,44 @@
         padding: 10px 0;
       }
     }
-
+    .menu-btn {
+      position: relative;
+      margin-bottom: 10px;
+      width: 30px;
+      height: 20px;
+    }
+    .menu-btn span {
+      top: 9px;
+    }
+    .menu-btn:before,
+    .menu-btn span,
+    .menu-btn:after {
+      position: absolute;
+      content: '';
+      background-color: #000000;
+      width: 100%;
+      height: 2px;
+      right: 0;
+      transition: .3s;
+    }
+    .menu-btn:before {
+      top: 0;
+    }
+    .menu-btn:after {
+      bottom: 0;
+    }
+    .menu-btn.show span {
+      transform: scale(0);
+    }
+    .menu-btn.show:before {
+      transform: rotate(45deg);
+      top: 9px;
+    }
+    .menu-btn.show:after {
+      transform: rotate(-45deg);
+      bottom: 9px;
+    }
   }
-}
-
-.margin-top {
-  transition: .5s;
-  margin-top: 200px;
-}
-
-.margin-top-off {
-  transition: .5s;
-  margin-top: 0;
 }
 
 /*-------------------------------------*/
@@ -214,27 +307,46 @@
 /*--------426px--------------------------------*/
 
 @media (max-width: 426px) {
+  .logo__img {
+    max-width: 150px;
+  }
   .header {
-    min-height: 155px;
+    min-height: 135px;
     &__inner {
       padding-bottom: 10px;
-      position: relative;
     }
-    .menu.up-side-menu {
-      transform: translateY(180%);
+    &__buttons {
+      top: 100%;
+      right: 2%;
+      transform: translate(0%, -50%);
     }
     .search-center {
       position: absolute;
-      left: 0;
+      left: 10px;
       bottom: -35px;
+    }
+    .menu.show {
+      margin-top: 35px;
     }
     .account {
       padding: 20px 10px 10px;
       width: 300px;
       height: 270px;
       &.account-form {
-        transform: translateY(200%);
+        transform: translateY(350%);
       }
+    }
+  }
+}
+
+/*-------------------------------------*/
+
+/*--------376px--------------------------------*/
+
+@media (max-width: 376px) {
+  .header {
+    .account.account-form {
+      transform: translateY(320%);
     }
   }
 }
@@ -244,8 +356,61 @@
 /*--------320px--------------------------------*/
 
 @media (max-width: 320px) {
-  .header__input-search {
-    width: 240px;
+  .header {
+    &__input-search {
+      width: 240px;
+    }
+    .account.account-form {
+      transform: translateY(265%);
+    }
+  }
+}
+
+/*-------------------------------------*/
+
+/*--------768px--------------------------------*/
+
+@media (max-height: 768px) and (orientation: landscape) {
+  .header {
+    .account.account-form {
+      transform: translateY(340%);
+    }
+  }
+}
+
+/*-------------------------------------*/
+
+/*--------415px--------------------------------*/
+
+@media (max-height: 415px) and (orientation: landscape) {
+  .header {
+    .account.account-form {
+      transform: translateY(160%);
+    }
+  }
+}
+
+/*-------------------------------------*/
+
+/*--------376px--------------------------------*/
+
+@media (max-height: 376px) and (orientation: landscape) {
+  .header {
+    .account.account-form {
+      transform: translateY(140%);
+    }
+  }
+}
+
+/*-------------------------------------*/
+
+/*--------320px--------------------------------*/
+
+@media (max-height: 320px) and (orientation: landscape) {
+  .header {
+    .account.account-form {
+      transform: translateY(110%);
+    }
   }
 }
 

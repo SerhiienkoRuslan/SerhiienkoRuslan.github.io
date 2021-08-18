@@ -154,6 +154,14 @@
     &__link {
       line-height: 36px;
     }
+    &__link:hover {
+      color: $default;
+    }
+    &__number:hover,
+    &__mail:hover,
+    &__site:hover {
+      color: $default;
+    }
     &__form {
       margin-top: 20px;
     }

@@ -194,6 +194,7 @@
     }
     &--line:after {
       width: 300px;
+      content: '';
     }
     &__subtitle::before {
       left: -45px;

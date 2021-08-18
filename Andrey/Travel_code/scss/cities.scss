@@ -66,16 +66,13 @@
 @media (max-width: 1024px) {
   .cities {
     &__inner {
-      margin: 0 -25px;
+      margin: 0 -10px;
     }
-    &__info {
-      margin: 0 25px;
+    &__photo {
+      margin: 0 10px;
     }
     &__info-text {
       margin-bottom: 50px;
-    }
-    &__photo {
-      margin: 0 25px;
     }
   }
 }
@@ -87,6 +84,7 @@
 @media (max-width: 768px) {
   .cities {
     &__inner {
+      justify-content: center;
       flex-wrap: wrap;
       margin: 0 -15px;
     }
@@ -146,3 +144,18 @@
 }
 
 /*--------------------------------------------*/
+
+/*--------415px--------------------------------*/
+
+@media (max-height: 415px) and (orientation: landscape) {
+  .cities {
+    &__info {
+      max-width: 100%;
+    }
+    &__photo {
+      width: 44%;
+    }
+  }
+}
+
+/*-------------------------------------*/

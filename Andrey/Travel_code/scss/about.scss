@@ -1,4 +1,5 @@
 .about {
+  padding-bottom: 50px;
   &__inner {
     padding: 30px 135px;
     position: relative;
@@ -9,12 +10,16 @@
     align-items: flex-start;
   }
   &__title {
+    z-index: 1;
     font-weight: bold;
     font-size: 84px;
     line-height: 112px;
     margin-bottom: 50px;
     max-width: 800px;
     color: $black;
+  }
+  &__btn {
+    z-index: 1;
   }
   &__slider {
     position: absolute;
@@ -35,19 +40,17 @@
     height: 30px;
   }
   &__slider .slick-arrow.slick-prev {
+    z-index: 2;
     left: 40px;
-    background-image: url("../images/arrow-left.svg");
-    background-repeat: no-repeat;
+    background: url("../images/arrow-left.svg"), no-repeat, center center;
     background-size: cover;
-    background-position: center center;
     font-size: 0;
   }
   &__slider .slick-arrow.slick-next {
+    z-index: 2;
     left: 100px;
-    background-image: url("../images/arrow-right.svg");
-    background-repeat: no-repeat;
+    background: url("../images/arrow-right.svg"), no-repeat, center center;
     background-size: cover;
-    background-position: center center;
     font-size: 0;
   }
   .liner {
@@ -57,11 +60,7 @@
     width: 0;
     height: 5px;
     position: absolute;
-    content: '';
-    animation-name: liner;
-    animation-duration: 10000ms;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+    animation: liner 10000ms linear infinite;
   }
   @keyframes liner {
     0% {
@@ -73,9 +72,10 @@
     }
   }
   &__destinations {
+    z-index: 10;
     position: absolute;
     bottom: -75px;
-    right: -15px;
+    right: 0;
     padding: 45px;
     background-color: #ffffff;
     color: #A79997;
@@ -92,9 +92,19 @@
     display: flex;
     font-size: 16px;
     line-height: 19px;
+    margin-bottom: 10px;
   }
   &__destinations select {
+    cursor: pointer;
+    display: inline-block;
+    border-bottom: 1px solid #F5EBE9;
+    border-radius: 5px;
+    padding: 10px;
     color: #FF715B;
+    min-width: 170px;
+  }
+  &__destinations select:focus {
+    box-shadow: 0 10px 30px 5px rgba(219, 200, 197, 0.2);
   }
 }
 
@@ -104,17 +114,25 @@
   .about {
     &__inner {
       padding: 25px 90px;
-      min-height: 80vh;
     }
-    &__slider-img {
-      height: 80vh;
+    &__slider .slick-arrow {
+      bottom: -60px;
+      width: 40px;
+      height: 40px;
+    }
+    .liner {
+      left: 145px;
     }
     @keyframes liner {
       100% {
         width: 150px;
       }
     }
+    &__destinations {
+      flex-wrap: wrap;
+    }
     &__destinations-btn {
+      margin-top: 10px;
       font-size: 16px;
       line-height: 20px;
       padding: 12px 24px;
@@ -129,11 +147,7 @@
 @media (max-width: 768px) {
   .about {
     &__inner {
-      min-height: 60vh;
       padding: 20px 50px;
-    }
-    &__slider-img {
-      height: 60vh;
     }
     &__btn {
       font-size: 16px;
@@ -147,19 +161,18 @@
       max-width: 650px;
     }
     &__slider .slick-arrow {
-      bottom: -30px;
-      width: 20px;
-      height: 20px;
+      bottom: -80px;
+      width: 60px;
+      height: 60px;
     }
     &__slider .slick-arrow.slick-prev {
       left: 15px;
     }
     &__slider .slick-arrow.slick-next {
-      left: 60px;
+      left: 120px;
     }
     .liner {
-      left: 80px;
-      bottom: -25px;
+      display: none;
     }
     @keyframes liner {
       100% {
@@ -168,8 +181,8 @@
     }
     &__destinations {
       flex-wrap: wrap;
-      justify-content: space-around;
-      padding: 20px;
+      justify-content: space-between;
+      padding: 15px;
     }
     &__destinations-title {
       font-size: 14px;
@@ -177,48 +190,133 @@
     }
     &__destinations label {
       margin-bottom: 15px;
+      flex-grow: 1;
+      margin-right: 0;
+    }
+    &__destinations-btn {
+      margin-top: 0;
+      display: inline-block;
+      align-self: center;
+      flex-grow: 1;
     }
   }
 }
 
 /*--------------------------------------------*/
 
-/*--------426px--------------------------------*/
+/*--------620px--------------------------------*/
 
-@media (max-width: 426px) {
+@media (max-width: 620px) {
   .about {
     &__inner {
-      justify-content: normal;
-      min-height: 60vh;
       padding: 15px 25px;
+      justify-content: normal;
     }
     &__title {
-      font-size: 35px;
-      line-height: 50px;
+      font-size: 55px;
+      line-height: 75px;
       margin-bottom: 15px;
     }
-    &__slider-img {
-      height: 60vh;
-    }
     &__slider .slick-arrow {
-      bottom: -30px;
-      width: 15px;
-      height: 15px;
+      bottom: 30%;
+      width: 40px;
+      height: 40px;
     }
     &__slider .slick-arrow.slick-prev {
       left: 10px;
     }
     &__slider .slick-arrow.slick-next {
-      left: 35px;
-    }
-    .liner {
-      display: none;
+      left: 86%;
+      background-color: #C3E2F7;
     }
     &__destinations {
       justify-content: space-between;
-      width: 90%;
+      align-items: center;
+      width: 101%;
+      bottom: 0;
+      left: -1%;
+      right: -1%;
+      margin: 0 auto;
+    }
+    &__destinations-btn {
+      padding: 8px 16px;
     }
   }
 }
 
 /*--------------------------------------------*/
+
+/*--------376px--------------------------------*/
+
+@media (max-width: 376px) {
+  .about {
+    &__inner {
+      justify-content: normal;
+    }
+    &__title {
+      font-size: 35px;
+      line-height: 50px;
+    }
+    &__slider .slick-arrow {
+      bottom: 50%;
+    }
+    &__destinations select {
+      width: 100%;
+    }
+    &__destinations-btn {
+      padding: 5px 10px;
+      align-self: center;
+      width: 100%;
+    }
+  }
+}
+
+/*--------------------------------------------*/
+
+/*--------320px--------------------------------*/
+
+@media (max-width: 320px) {
+  .about {
+    &__slider .slick-arrow {
+      display: none!important;
+    }
+  }
+}
+
+/*--------------------------------------------*/
+
+/*--------768px--------------------------------*/
+
+@media (max-height: 768px) and (orientation: landscape) {
+  .about {
+    &__title {
+      font-size: 72px;
+      line-height: 100px;
+    }
+  }
+}
+
+/*-------------------------------------*/
+
+/*--------415px--------------------------------*/
+
+@media (max-height: 415px) and (orientation: landscape) {
+  .about {
+    &__title {
+      font-size: 30px;
+      line-height: 40px;
+    }
+    &__slider .slick-arrow {
+      display: none!important;
+    }
+    &__destinations {
+      width: 100%;
+    }
+    &__destinations-btn {
+      margin: 0 auto;
+      flex-grow: 0;
+    }
+  }
+}
+
+/*-------------------------------------*/

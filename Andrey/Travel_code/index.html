@@ -37,23 +37,25 @@
           </ul>
         </nav>
 
+        <span></span>
+
         <div class="header__buttons">
           <button class="menu-btn display-none">
-            <img src="images/button.svg" alt="menu-btn" width="30px" height="30px">
+            <span></span>
           </button>
 
           <button class="header__btn header__btn--account">
-            <img class="header__btn-img" src="images/user.svg" alt="user icon">
+            <img class="header__btn-img--account" src="images/user.svg" alt="user icon">
             My Account
           </button>
 
           <form class="header__search" method="get">
-            <input class="header__input-search display-none" type="text">
-            <button class="header__search-cancel display-none" type="reset">
+            <input class="header__input-search" type="text">
+            <button class="header__search-cancel" type="reset">
               <img src="images/cancel.svg" alt="cancel">
             </button>
-            <button class="header__btn search" type="button">
-              <img class="header__btn-img" src="images/search.svg" alt="user icon">
+            <button class="header__btn header__input-btn" type="submit">
+              <img class="header__btn-img" src="images/search.svg" alt="search icon">
             </button>
           </form>
         </div>
@@ -87,18 +89,19 @@
 
     <section class="about">
       <div class="container">
-
-        <div class="slider about__slider">
-          <img class="about__slider-img" src="images/about-bg-1.jpg" alt="bg">
-          <img class="about__slider-img" src="images/about-bg-1.jpg" alt="bg">
-          <img class="about__slider-img" src="images/about-bg-1.jpg" alt="bg">
-        </div>
-
         <div class="about__inner">
+
+          <div class="slider about__slider">
+            <img class="about__slider-img" src="images/about-bg-1.jpg" alt="bg">
+            <img class="about__slider-img" src="images/about-bg-1.jpg" alt="bg">
+            <img class="about__slider-img" src="images/about-bg-1.jpg" alt="bg">
+          </div>
+
           <h1 class="about__title">
             It’s Time To
             Explore The World
           </h1>
+
           <button class="btn about__btn">
             Plan Your Trip
           </button>
@@ -141,8 +144,8 @@
               Discover Now
             </button>
           </form>
-        </div>
 
+        </div>
       </div>
     </section>
 
