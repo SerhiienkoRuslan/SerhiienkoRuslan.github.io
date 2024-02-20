@@ -1,1 +1,1 @@
-# andriihorlov.github.io
+# https://serhiienkoruslan.github.io/
