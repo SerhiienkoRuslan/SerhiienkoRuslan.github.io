@@ -10,11 +10,11 @@ const About = () => {
 
   return (
     <AboutProjectBox title={t("about")}>
-      {ABOUT_DATA.map((data) => (
+      {ABOUT_DATA.map((data, index) => (
         <AboutDropdown
-          key={data.number}
+          key={index}
           content={data.content}
-          number={data.number}
+          number={`${String(index + 1).padStart(2, "0")}.`}
           name={data.name}
         />
       ))}
