@@ -75,7 +75,7 @@ const Contacts = () => {
           src={theme ? Phone_light : Phone_dark}
           alt="phone"
         />
-        <p className={addTheme(styles.phoneContent)}>+38 (000) 000 00 00</p>
+        {/* <p className={addTheme(styles.phoneContent)}>+38 (000) 000 00 00</p> */}
       </div>
 
       <div className={styles.link}>
@@ -85,7 +85,7 @@ const Contacts = () => {
           alt="linkedin"
         />
         <ContactLink
-          link="#"
+          link="https://t.me/rserhiienko"
           logo={theme ? Telegram_light : Telegram_dark}
           alt="telegram"
         />
