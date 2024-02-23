@@ -61,7 +61,7 @@ const Contacts = () => {
             alt="email"
           />
           <p className={addTheme(styles.emailContent)}>
-            andreygorlovv@gmail.com
+            rserhiienko93@gmail.com
           </p>
         </div>
         <button className={addTheme(styles.copyButton)} onClick={handleCopy}>
@@ -75,23 +75,22 @@ const Contacts = () => {
           src={theme ? Phone_light : Phone_dark}
           alt="phone"
         />
-        <p className={addTheme(styles.phoneContent)}>+38 (066) 425 20 80</p>
-        <p className={addTheme(styles.phoneContent)}>+351 (913) 486 330</p>
+        {/* <p className={addTheme(styles.phoneContent)}>+38 (000) 000 00 00</p> */}
       </div>
 
       <div className={styles.link}>
         <ContactLink
-          link="https://www.linkedin.com/in/fidgetik/"
+          link="https://www.linkedin.com/in/ruslan-serhiienko-b62007177/"
           logo={theme ? Linkedin_light : Linkedin_dark}
           alt="linkedin"
         />
         <ContactLink
-          link="https://t.me/fidgetik"
+          link="https://t.me/rserhiienko"
           logo={theme ? Telegram_light : Telegram_dark}
           alt="telegram"
         />
         <ContactLink
-          link="https://github.com/FidgHorlov"
+          link="https://github.com/SerhiienkoRuslan"
           logo={theme ? Git_light : Git_dark}
           alt="git"
         />
