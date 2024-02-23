@@ -1,20 +1,22 @@
-import { useTranslation } from "react-i18next";
-import { GlobalContext } from "../../../../context/GlobalContext";
 import { useContext, useState } from "react";
-import useTheme from "../../../../hooks/useTheme";
-import styles from "./Contacts.module.scss";
+import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
+
 import Email_light from "../../../../assets/email-light.svg";
 import Email_dark from "../../../../assets/email-dark.svg";
-import Phone_light from "../../../../assets/phone-light.svg";
-import Phone_dark from "../../../../assets/phone-dark.svg";
+// import Phone_light from "../../../../assets/phone-light.svg";
+// import Phone_dark from "../../../../assets/phone-dark.svg";
 import Linkedin_dark from "../../../../assets/linkedin-dark.svg";
 import Linkedin_light from "../../../../assets/linkedin-light.svg";
 import Telegram_dark from "../../../../assets/telegram-dark.svg";
 import Telegram_light from "../../../../assets/telegram-light.svg";
 import Git_dark from "../../../../assets/git-dark.svg";
 import Git_light from "../../../../assets/git-light.svg";
+
+import { GlobalContext } from "../../../../context/GlobalContext";
+import useTheme from "../../../../hooks/useTheme";
 import ContactLink from "../ContactLink/ContactLink";
-import { motion } from "framer-motion";
+import styles from "./Contacts.module.scss";
 
 const Contacts = () => {
   const { t } = useTranslation();
@@ -69,14 +71,14 @@ const Contacts = () => {
         </button>
       </div>
 
-      <div className={styles.phone}>
-        <img
-          className={styles.logo}
-          src={theme ? Phone_light : Phone_dark}
-          alt="phone"
-        />
-        {/* <p className={addTheme(styles.phoneContent)}>+38 (000) 000 00 00</p> */}
-      </div>
+      {/*<div className={styles.phone}>*/}
+      {/*  <img*/}
+      {/*    className={styles.logo}*/}
+      {/*    src={theme ? Phone_light : Phone_dark}*/}
+      {/*    alt="phone"*/}
+      {/*  />*/}
+      {/*  <p className={addTheme(styles.phoneContent)}>+38 (000) 000 00 00</p> */}
+      {/*</div>*/}
 
       <div className={styles.link}>
         <ContactLink
