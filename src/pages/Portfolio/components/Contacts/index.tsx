@@ -30,7 +30,7 @@ const Contacts = () => {
   }
 
   const handleCopy = () => {
-    navigator.clipboard.writeText("andreygorlovv@gmail.com");
+    navigator.clipboard.writeText("rserhiienko93@gmail.com");
     setIsCopy(true);
   };
 
