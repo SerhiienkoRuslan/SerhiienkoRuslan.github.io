@@ -1,18 +1,21 @@
 import { useContext } from "react";
-import "./App.scss";
-import Header from "./components/Header";
+
 import Portfolio from "./pages/Portfolio";
+
+import Header from "./components/Header";
 import { GlobalContext } from "./context/GlobalContext";
 import AnimatedCursor from "./components/Cursor";
+
+import "./App.scss";
 
 function App() {
   const { theme } = useContext(GlobalContext);
 
-  const isMobile = window.innerWidth >= 768;
+  const isTable = window.innerWidth >= 768;
 
   return (
     <div className="App" style={{ background: theme ? "#fff" : "#0c151d" }}>
-      {isMobile && <AnimatedCursor />}
+      {isTable && <AnimatedCursor />}
       <div className="appWrapper">
         <Header />
         <Portfolio />

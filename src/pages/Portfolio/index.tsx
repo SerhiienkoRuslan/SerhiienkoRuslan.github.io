@@ -1,12 +1,15 @@
 import { useContext } from "react";
+
 import { GlobalContext } from "../../context/GlobalContext";
-import styles from "./Portfolio.module.scss";
+import useTheme from "../../hooks/useTheme";
+
 import Title from "./components/Title";
 import Generally from "./components/Generally";
 import Contacts from "./components/Contacts";
 import Projects from "./components/Projects/Projects";
 import About from "./components/About/About";
-import useTheme from "../../hooks/useTheme";
+
+import styles from "./Portfolio.module.scss";
 
 const Portfolio = () => {
   const { theme } = useContext(GlobalContext);
